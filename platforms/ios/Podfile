@@ -1,1 +1,1 @@
-pod 'SignatureView', :git => 'https://github.com/diamond2010/THSigningPad.git'
+pod 'THSigningPad', :git => 'https://github.com/diamond2010/THSigningPad.git'

@@ -1,9 +1,9 @@
 {
   "name": "nativescript-signingpad",
   "version": "1.0.0",
-  "main": "thsigningpad",
+  "main": "signingpad",
   "typings": "index.d.ts",
-  "description": "A NativeScript plugin for IOS to provide a way to capture signatures from the device screen.",
+  "description": "A NativeScript plugin for IOS and Android to provide a way to capture signatures from the device screen.",
   "nativescript": {
     "platforms": {
       "android": "3.0.0",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diamond2010/THSigningPad.git"
+    "url": "git+https://github.com/diamond2010/nativescript-signingpad.git"
   },
   "keywords": [
     "NativeScript",
@@ -32,28 +32,19 @@
     "clean": "rm -rf demo/node_modules demo/lib demo/platforms",
     "demo.ios": "npm run preparedemo; cd demo; tns run ios",
     "demo.android": "npm run preparedemo; cd demo; tns run android",
-    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-drawingpad; tns plugin add ..; tns install",
-    "setup": "npm i; cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd ..",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
+    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-signingpad; tns plugin add ..; tns install",
+    "setup": "npm i; cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
+    
   },
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/diamond2010/THSigningPad/issues"
+    "url": "https://github.com/diamond2010/nativescript-signingpad/issues"
   },
-  "homepage": "https://github.com/diamond2010/THSigningPad",
+  "homepage": "https://github.com/diamond2010/nativescript-signingpad",
   "peerDependencies": {
     "tns-core-modules": "^3.0.0"
   },
   "devDependencies": {
-    "husky": "^0.13.4",
-    "lint-staged": "^3.6.1",
-    "prettier": "^1.4.4",
     "tns-core-modules": "3.0.0",
     "tns-platform-declarations": "3.0.1",
     "typescript": "~2.3.4"
