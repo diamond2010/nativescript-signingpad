@@ -7,7 +7,7 @@
 
 # nativescript-signingpad
 
-A signing pad to provide signing functionality on iOS
+A signing pad to provide signing functionality on iOS and Android
 
 
 In respect forked from the original nativescript-drawingpad by:https://github.com/bradmartin/nativescript-drawingpad
