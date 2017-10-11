@@ -1,0 +1,1 @@
+pod 'SignatureView', :git => 'https://github.com/diamond2010/THSigningPad.git'
