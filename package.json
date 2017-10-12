@@ -1,5 +1,5 @@
 {
-  "name": "nativescript-signingpad-ios",
+  "name": "nativescript-signingpad",
   "version": "1.0.0",
   "main": "signingpad",
   "typings": "index.d.ts",
