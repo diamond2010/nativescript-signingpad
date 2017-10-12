@@ -10,22 +10,23 @@
 
 
 import { Color } from "color";
+// TH: 12.10.17 Refactor -> Rename SigningPad -> SigningPad
 import {
-  DrawingPadBase,
+  SigningPadBase,
   penColorProperty,
   penWidthProperty
-} from "./drawingpad-common";
+} from "./signingpad-common";
 
 
 // TH: 11.10.17 Rename SignatureView to THSigningImageView
-declare var THSigningImageView: any;
+declare let THSigningImageView: any;
 
-export * from "./drawingpad-common";
+export * from "./signingpad-common";
 
-export class DrawingPad extends DrawingPadBase {
+export class SigningPad extends SigningPadBase {
   constructor() {
     super();
-    // console.log('--------- DrawingPad ---------');
+    // console.log('--------- SigningPad ---------');
     // TH: 11.10.17 Rename SignatureView to THSigningImageView
     this.nativeView = THSigningImageView.alloc().initWithFrame(
       CGRectMake(0, 0, 100, 100)
@@ -70,7 +71,7 @@ export class DrawingPad extends DrawingPadBase {
           let data = this.nativeView.signatureImage();
           resolve(data);
         } else {
-          reject("DrawingPad is empty.");
+          reject("SigningPad is empty.");
         }
       } catch (err) {
         reject(err);
@@ -86,7 +87,7 @@ export class DrawingPad extends DrawingPadBase {
           let data = this.nativeView.signatureSvg();
           resolve(data);
         } else {
-          reject("DrawingPad is empty.");
+          reject("SigningPad is empty.");
         }
       } catch (err) {
         reject(err);
@@ -108,7 +109,7 @@ export class DrawingPad extends DrawingPadBase {
         this.nativeView.clear();
       }
     } catch (err) {
-      console.log("Error clearing the DrawingPad: " + err);
+      console.log("Error clearing the SigningPad: " + err);
     }
   }
 }

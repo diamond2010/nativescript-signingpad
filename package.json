@@ -1,13 +1,18 @@
 {
-  "name": "nativescript-signingpad",
+  "name": "nativescript-signingpad-ios",
   "version": "1.0.0",
   "main": "signingpad",
   "typings": "index.d.ts",
-  "description": "A NativeScript plugin for IOS and Android to provide a way to capture signatures from the device screen.",
+  "description": "A NativeScript plugin for IOS to provide a way to capture signatures from the device screen.",
   "nativescript": {
     "platforms": {
-      "android": "3.0.0",
       "ios": "3.0.0"
+    },
+    "plugin": {
+      "nan": "true",
+      "pan": "true",
+      "core3": "true",
+      "category": "Interface"
     }
   },
   "repository": {
@@ -47,6 +52,6 @@
   "devDependencies": {
     "tns-core-modules": "3.0.0",
     "tns-platform-declarations": "3.0.1",
-    "typescript": "~2.3.4"
+    "typescript": "~2.2.0"
   }
 }
